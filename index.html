@@ -20,11 +20,61 @@
   </head>
 
   <body>
-    <h1>Open the Developer Tools to see the console output.</h1>
-    <h3>
-      Either right click and select "Inspect" or use the shortcut Option + ⌘ + J
-      (on macOS), or Shift + CTRL + J (on Windows/Linux).
-    </h3>
+    <h1>“IT'S JEOPARDY!”</h1>
+
+    <div class="startTheGame-screen">
+      <form>
+        <button id="startButton" type="button">Let Start the Game</button>
+      </form>
+    </div>
+
+    <div class="game-screen" style="display: none">
+      <form>
+        <h4>Category:</h4>
+        <div>
+          <p id="category" type="text" placeholder=""></p>
+        </div>
+
+        <h4>Your Score:</h4>
+        <div>
+          <p id="contestantScore"></p>
+        </div>
+        <div>
+          <h4>Trivia Question</h4>
+          <p id="triviaQuestion"></p>
+        </div>
+        <div>
+          <h4>Your Answer Please</h4>
+          <input id="contestantAnswer" type="text" />
+        </div>
+        <div>
+          <button id="submitAnswer" type="button">”Submit Your Answer”</button>
+        </div>
+      </form>
+
+      <div class="correctAnswer" style="display: none">
+      
+        <h2>"You're Correct"</h2>
+      
+    </div>  
+
+      <!-- <div>
+        <p id="correctAnswer"></p>
+        <h4>"You're Correct"</h4>
+      </div> -->
+    </div>
+
+    <div class="gameOver-screen" style="display: none">
+      <h2>"Your Answer is Incorrect"</h2>
+      <h3>Game Over</h3>
+      <button id="playAgain" type="button">Want to Play Again</button>
+      <button id="exitGame" type="button">Exit the Game</button>
+    </div>
+
+    <!-- <h3>
+    Either right click and select "Inspect" or use the shortcut Option + ⌘ + J
+    (on macOS), or Shift + CTRL + J (on Windows/Linux).
+  </h3> -->
     <script src="code.js"></script>
   </body>
 </html>
