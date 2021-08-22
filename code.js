@@ -1,5 +1,6 @@
 //Global Variables
 let gameQuestions = [];
+let gameAnswer = ""
 let score = 0;
 let yourAnswer = String();
 
@@ -33,19 +34,20 @@ document.getElementById("startButton").addEventListener("click", getQuestions);
 // the "Score" section, the Trivia "question" section, the "Your Answer Please" (input) section
 // with a submit button
 function displayQuestions() {
+  let random = Math.floor(Math.random()*gameQuestions.length)
   document.querySelector(
     "#category"
-  ).innerHTML = `${gameQuestions[length].category.title}`;
+  ).innerHTML = `${gameQuestions[random].category.title}`;
 
   document.querySelector(
     "#triviaQuestion"
-  ).innerHTML = `${gameQuestions[length].question}`;
+  ).innerHTML = `${gameQuestions[random].question}`;
   document.querySelector("#contestantScore").innerHTML = `${score}`;
 
   document.querySelector(".startTheGame-screen").style.display = "none";
   // the board game screen appear
   document.querySelector(".game-screen").style.display = "block";
-
+  gameAnswer = gameQuestions[random].answer.toLowerCase();
   document.querySelector(".gameOver-screen").style.display = "none";
 }
 
@@ -58,8 +60,6 @@ function contestantRespond() {
   // You can enter your answer lowercase, uppercase, and both
   yourAnswer = document.querySelector("#contestantAnswer").value;
   yourAnswer = yourAnswer.toLowerCase();
-  let gameAnswer = gameQuestions[length].answer.toLowerCase();
-
   // if your answer is correct: 1) you be get 1 point, 2) It will display "You're Correct"
   // on the screen for 3 second and 3) You will be sent back to the getQuestion function
   // for the next Trivia question
@@ -71,10 +71,11 @@ function contestantRespond() {
     setTimeout(() => {
       document.querySelector(".correctAnswer").style.display = "none";
     }, 3000);
-    getQuestions();
+    displayQuestions();
 
-    // if your answer is incorrect: 1) Your score will go back to ZERO(0), 2) You will be sent to
-    // the game over screen" that says "Your Answer is Incorrect" "Game Over".
+    // if your answer is incorrect: 1) Your score will go back to ZERO(0), 
+    // 2) You will be sent tothe game over screen" that says "Your Answer 
+    // is Incorrect" "Game Over".
   } else {
     score = 0;
     document.querySelector("#contestantScore").innerHTML = `${score}`;

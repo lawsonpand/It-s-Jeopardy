@@ -1,1 +1,25 @@
 /* Write your CSS Here. */
+body {
+background-color: burlywood;
+text-align: center;
+font-family: sans-serif;
+}
+
+h1{
+color: purple;
+font-size: 5em;
+font-family:Georgia, 'Times New Roman', Times, serif; 
+}
+
+.correctAnswer h2{
+color: darkgreen;
+font-size: 2em;
+font-family:Georgia, 'Times New Roman', Times, serif; 
+}
+
+.gameOver-screen h2{
+color: red;
+font-size: 2em;
+font-family:Georgia, 'Times New Roman', Times, serif; 
+}
+
