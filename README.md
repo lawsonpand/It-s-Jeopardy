@@ -1,5 +1,3 @@
-# Kenzie Academy JavaScript Assignment
+# The Jeopardy Game – 
 
-Complete your work inside of `code.js`
-
-Follow the instructions provided on my.kenzie.academy for this assignment.
+The start -the-game screen is the first screen.  Here will hit the “Let’s Start the Game” button.  This will take you to the game – screen.  Where you are giving a category, can see your score, and a trivia question.  There is area to type in your answer to the trivia question and submit it.  If you answer is correct the message “You’re Correct “will pop up.  You will get one point for every correct answer but if you answer is incorrect and anything your score will go to zero and you will be sent to the game-over screen.  On this screen you are giving the messages “Your Answer Is Incorrect” and “Game Over”.  In the game-over score you have two options.  You can select the “Want to Play Again” or “Exit the Game” button.  If you want to play again you will be sent back to the game-screen.  If you want to exit the game, you will be sent to the start-the-game screen
